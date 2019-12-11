@@ -1,24 +1,12 @@
 import React from 'react';
-import Slider from 'react-slick';
-import Link, { withPrefix } from 'gatsby-link';
-import Main from '../gatsby-layouts/main';
-import Container from '../components/Container';
 
-import sliders from '../stories/mock/components/data/slider.json';
-import team from '../stories/mock/components/data/team.json';
-import features from '../stories/mock/components/data/features.json';
-import particles from '../stories/mock/components/data/particles.json';
-import build from '../stories/mock/components/data/build.json';
-import backers from '../stories/mock/components/data/backers.json';
-import carousel from '../stories/mock/components/data/carousel.json';
-import { navBarCode, importThemes } from '../stories/mock/components/data/code';
-// core
+import Slider from 'react-slick';
+
+import Link, { withPrefix } from 'gatsby-link';
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-// theme for code
-import 'codemirror/theme/oceanic-next.css';
 
-import AnimatedHero from '../stories/mock/components/data/hero';
 import {
   Hero,
   Image,
@@ -35,6 +23,17 @@ import {
   Backers,
   Link as Front10Link
 } from '../components';
+import Container from '../components/Container';
+import Main from '../gatsby-layouts/main';
+import backers from '../stories/mock/components/data/backers.json';
+import build from '../stories/mock/components/data/build.json';
+import carousel from '../stories/mock/components/data/carousel.json';
+import { navBarCode, importThemes } from '../stories/mock/components/data/code';
+import features from '../stories/mock/components/data/features.json';
+import AnimatedHero from '../stories/mock/components/data/hero';
+import particles from '../stories/mock/components/data/particles.json';
+import sliders from '../stories/mock/components/data/slider.json';
+import team from '../stories/mock/components/data/team.json';
 
 const IndexPage = () => (
   <React.Fragment>
