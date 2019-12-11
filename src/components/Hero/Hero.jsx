@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import LazyHero from 'react-lazy-hero';
-import Particles from 'react-particles-js';
 import extractProps from '../../helpers/ExtractProps';
 import Container from '../Container/Container';
 import Button from '../Button/Button';
@@ -62,8 +61,6 @@ class Hero extends Component {
       minHeight,
       subHeaderPosition,
       particles,
-      particlesParams,
-      particlesSugar,
       backgroundColor,
       callToAction,
       children,
@@ -81,11 +78,7 @@ class Hero extends Component {
     const { randomClass } = this.state;
 
     const customCssFilter = Hero.getCustomCssFilterForImg(this.props, this.state);
-    const particlesSugarParams = Hero.getParticlesParams(
-      particles,
-      particlesSugar,
-      particlesParams
-    );
+
     const newStyles = Object.assign({}, backgroundColor, style);
     return (
       <div className={`Hero ${randomClass}`} style={{ newStyles }}>
@@ -99,11 +92,7 @@ class Hero extends Component {
           minHeight={minHeight}
           style={style}
         >
-          {particles && (
-            <div className="Hero__Particles">
-              <Particles params={particlesSugarParams} />
-            </div>
-          )}
+          {particles && <div className="Hero__Particles" />}
           <div className="Hero__Container d-flex align-content-center">
             {/* {!children && template && (
              <TemplateComponent {...this.props.templateProps} {...this.props}/>
