@@ -1,3 +1,4 @@
+import Button from './Button';
 import Column from './Column';
 import Container from './Container';
 import Copyright from './Copyright';
@@ -16,6 +17,7 @@ import Row from './Row';
 import Section from './Section';
 
 export {
+  Button,
   Column,
   Container,
   Copyright,
@@ -25,7 +27,6 @@ export {
   Image,
   ImageList,
   Link,
-  Location,
   Navbar,
   NavbarBrand,
   NavbarCollapse,

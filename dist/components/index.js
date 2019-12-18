@@ -3,7 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Section = exports.Row = exports.NavbarNav = exports.NavbarLink = exports.NavbarCollapse = exports.NavbarBrand = exports.Navbar = exports.Location = exports.Link = exports.ImageList = exports.Image = exports.Hero = exports.Header = exports.Footer = exports.Copyright = exports.Container = exports.Column = undefined;
+exports.Section = exports.Row = exports.NavbarNav = exports.NavbarLink = exports.NavbarCollapse = exports.NavbarBrand = exports.Navbar = exports.Link = exports.ImageList = exports.Image = exports.Hero = exports.Header = exports.Footer = exports.Copyright = exports.Container = exports.Column = exports.Button = undefined;
+
+var _Button = require('./Button');
+
+var _Button2 = _interopRequireDefault(_Button);
 
 var _Column = require('./Column');
 
@@ -71,6 +75,7 @@ var _Section2 = _interopRequireDefault(_Section);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+exports.Button = _Button2.default;
 exports.Column = _Column2.default;
 exports.Container = _Container2.default;
 exports.Copyright = _Copyright2.default;
@@ -80,7 +85,6 @@ exports.Hero = _Hero2.default;
 exports.Image = _Image2.default;
 exports.ImageList = _ImageList2.default;
 exports.Link = _Link2.default;
-exports.Location = Location;
 exports.Navbar = _Navbar2.default;
 exports.NavbarBrand = _NavbarBrand2.default;
 exports.NavbarCollapse = _NavbarCollapse2.default;
