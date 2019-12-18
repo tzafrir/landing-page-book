@@ -18,10 +18,6 @@ var _WithStyles = require('../../helpers/WithStyles');
 
 var _WithStyles2 = _interopRequireDefault(_WithStyles);
 
-var _Icon = require('../Icon/Icon');
-
-var _Icon2 = _interopRequireDefault(_Icon);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51,7 +47,6 @@ var Button = function (_Component) {
           ariaLabel = _props.ariaLabel,
           type = _props.type,
           onClick = _props.onClick,
-          loadingClass = _props.loadingClass,
           color = _props.color,
           outline = _props.outline,
           size = _props.size,
@@ -74,8 +69,7 @@ var Button = function (_Component) {
           type: type,
           style: style
         },
-        !loading && children,
-        loading && _react2.default.createElement(_Icon2.default, { icon: loadingClass })
+        !loading && children
       );
       /* eslint-enable react/button-has-type */
     }
@@ -101,10 +95,6 @@ Button.propTypes = {
    * Define if button is active
    */
   active: _propTypes2.default.bool,
-  /**
-   * Class to show loading indicator
-   */
-  loadingClass: _propTypes2.default.string,
   /**
    * Class to apply to button
    */
@@ -147,7 +137,6 @@ Button.defaultProps = {
   loading: false,
   outline: false,
   active: false,
-  loadingClass: 'fa fa-circle-o-notch fa-spin',
   className: '',
   style: {},
   ariaLabel: '',

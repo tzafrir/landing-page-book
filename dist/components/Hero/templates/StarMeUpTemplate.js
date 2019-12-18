@@ -30,10 +30,6 @@ var _Image = require('../../Image/Image');
 
 var _Image2 = _interopRequireDefault(_Image);
 
-var _GithubButton = require('../../GithubButton/GithubButton');
-
-var _GithubButton2 = _interopRequireDefault(_GithubButton);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -55,8 +51,6 @@ var StarMeUpTemplate = function (_Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          repository = _props.repository,
-          username = _props.username,
           header = _props.header,
           subHeader = _props.subHeader,
           callToAction = _props.callToAction,
@@ -89,13 +83,7 @@ var StarMeUpTemplate = function (_Component) {
             _Button2.default,
             null,
             callToAction.text
-          ),
-          _react2.default.createElement(_GithubButton2.default, {
-            btnType: 'star',
-            btnText: 'Stars',
-            username: username,
-            repository: repository
-          })
+          )
         )
       );
     }
@@ -105,8 +93,6 @@ var StarMeUpTemplate = function (_Component) {
 }(_react.Component);
 
 StarMeUpTemplate.propTypes = {
-  repository: _propTypes2.default.string,
-  username: _propTypes2.default.string,
   header: _propTypes2.default.string,
   subHeader: _propTypes2.default.string,
   callToAction: _propTypes2.default.shape({
@@ -121,8 +107,6 @@ StarMeUpTemplate.propTypes = {
 };
 
 StarMeUpTemplate.defaultProps = {
-  repository: 'landing-page-book',
-  username: 'front10',
   header: 'Landing Page Book',
   subHeader: 'React components to build!',
   callToAction: {

@@ -22,6 +22,12 @@ var _reactHelmet = require('react-helmet');
 
 var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 
+require('font-awesome/css/font-awesome.min.css');
+
+var _components = require('../components');
+
+require('../themes/default/index.css');
+
 var _ThemeSwitcher = require('../../storybook-utils/components/ThemeSwitcher');
 
 var _ThemeSwitcher2 = _interopRequireDefault(_ThemeSwitcher);
@@ -30,37 +36,29 @@ var _logoMainBLACK = require('../../assets/images/logo/logoMainBLACK.png');
 
 var _logoMainBLACK2 = _interopRequireDefault(_logoMainBLACK);
 
-var _components = require('../components');
-
-require('font-awesome/css/font-awesome.min.css');
-
-require('../themes/default/index.css');
-
-require('../pages/app.css');
-
 var _appleTouchIcon = require('./favicons/apple-touch-icon.png');
 
 var _appleTouchIcon2 = _interopRequireDefault(_appleTouchIcon);
-
-var _favicon = require('./favicons/favicon.ico');
-
-var _favicon2 = _interopRequireDefault(_favicon);
-
-var _favicon32x = require('./favicons/favicon-32x32.png');
-
-var _favicon32x2 = _interopRequireDefault(_favicon32x);
 
 var _favicon16x = require('./favicons/favicon-16x16.png');
 
 var _favicon16x2 = _interopRequireDefault(_favicon16x);
 
-var _safariPinnedTab = require('./favicons/safari-pinned-tab.svg');
+var _favicon32x = require('./favicons/favicon-32x32.png');
 
-var _safariPinnedTab2 = _interopRequireDefault(_safariPinnedTab);
+var _favicon32x2 = _interopRequireDefault(_favicon32x);
+
+var _favicon = require('./favicons/favicon.ico');
+
+var _favicon2 = _interopRequireDefault(_favicon);
 
 var _mstile144x = require('./favicons/mstile-144x144.png');
 
 var _mstile144x2 = _interopRequireDefault(_mstile144x);
+
+var _safariPinnedTab = require('./favicons/safari-pinned-tab.svg');
+
+var _safariPinnedTab2 = _interopRequireDefault(_safariPinnedTab);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -114,7 +112,6 @@ var MainLayout = function (_React$Component) {
           _react2.default.createElement('meta', { name: 'theme-color', content: '#ffffff' }),
           _react2.default.createElement('link', { rel: 'shortcut icon', href: _favicon2.default })
         ),
-        _react2.default.createElement(_components.Analytics, { idTracking: 'UA-44521541-9' }),
         _react2.default.createElement(
           _components.Navbar,
           {
@@ -231,12 +228,6 @@ var MainLayout = function (_React$Component) {
                   width: '100'
                 })
               )
-            ),
-            _react2.default.createElement(
-              _components.Column,
-              { className: 'col-sm-12 col-md mt-3 mt-md-0' },
-              _react2.default.createElement(_components.Social, { type: 'twitter', url: 'https://twitter.com/front10hello' }),
-              _react2.default.createElement(_components.Social, { type: 'linkedin', url: 'https://www.linkedin.com/company/front10/' })
             )
           )
         ),

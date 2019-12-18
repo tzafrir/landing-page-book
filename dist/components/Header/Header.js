@@ -18,10 +18,6 @@ var _WithStyles = require('../../helpers/WithStyles');
 
 var _WithStyles2 = _interopRequireDefault(_WithStyles);
 
-var _Icon = require('../Icon');
-
-var _Icon2 = _interopRequireDefault(_Icon);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -49,15 +45,13 @@ var Header = function (_Component) {
           className = _props.className,
           type = _props.type,
           children = _props.children,
-          textAlign = _props.textAlign,
-          icon = _props.icon,
           style = _props.style;
 
       var componentClassName = '' + className;
       return _react2.default.createElement(type, {
         className: componentClassName,
         style: style
-      }, [icon && textAlign === 'left' && _react2.default.createElement(_Icon2.default, { icon: icon, className: 'mr-1' }), children, icon && textAlign === 'right' && _react2.default.createElement(_Icon2.default, { icon: icon, className: 'ml-1' })]);
+      }, [children]);
     }
   }]);
 
@@ -78,25 +72,15 @@ Header.propTypes = {
    */
   type: _propTypes2.default.string,
   /**
-   * Icon to show in component
-   */
-  icon: _propTypes2.default.string,
-  /**
    * List of element to show inside as childrens.
    */
-  children: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.node), _propTypes2.default.node]),
-  /**
-   * Icon to show in component
-   */
-  textAlign: _propTypes2.default.string
+  children: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.node), _propTypes2.default.node])
 };
 Header.defaultProps = {
-  icon: '',
   className: '',
   style: null,
   type: 'h1',
-  children: null,
-  textAlign: null
+  children: null
 };
 
 exports.default = (0, _WithStyles2.default)(Header);

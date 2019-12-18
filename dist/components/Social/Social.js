@@ -14,8 +14,6 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _reactShare = require('react-share');
-
 var _WithStyles = require('../../helpers/WithStyles');
 
 var _WithStyles2 = _interopRequireDefault(_WithStyles);
@@ -28,22 +26,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var available = {
-  facebook: [_reactShare.FacebookShareButton, _reactShare.FacebookIcon],
-  google: [_reactShare.GooglePlusShareButton, _reactShare.GooglePlusIcon],
-  linkedin: [_reactShare.LinkedinShareButton, _reactShare.LinkedinIcon],
-  twitter: [_reactShare.TwitterShareButton, _reactShare.TwitterIcon],
-  telegram: [_reactShare.TelegramShareButton, _reactShare.TelegramIcon],
-  whatsapp: [_reactShare.WhatsappShareButton, _reactShare.WhatsappIcon],
-  pinterest: [_reactShare.PinterestShareButton, _reactShare.PinterestIcon],
-  vk: [_reactShare.VKShareButton, _reactShare.VKIcon],
-  ok: [_reactShare.OKShareButton, _reactShare.OKIcon],
-  tumblr: [_reactShare.TumblrShareButton, _reactShare.TumblrIcon],
-  livejournal: [_reactShare.LivejournalShareButton, _reactShare.LivejournalIcon],
-  viber: [_reactShare.ViberShareButton, _reactShare.ViberIcon],
-  email: [_reactShare.EmailShareButton, _reactShare.EmailIcon],
-  reddit: [_reactShare.RedditShareButton, _reactShare.RedditIcon]
-};
+var available = {};
 
 var Social = function (_Component) {
   _inherits(Social, _Component);
