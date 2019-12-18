@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from '../../helpers/WithStyles';
-import Icon from '../Icon/Icon';
 
 class Button extends Component {
   render() {
@@ -14,7 +13,6 @@ class Button extends Component {
       ariaLabel,
       type,
       onClick,
-      loadingClass,
       color,
       outline,
       size,
@@ -37,7 +35,6 @@ class Button extends Component {
         style={style}
       >
         {!loading && children}
-        {loading && <Icon icon={loadingClass} />}
       </button>
     );
     /* eslint-enable react/button-has-type */
@@ -61,10 +58,6 @@ Button.propTypes = {
    * Define if button is active
    */
   active: PropTypes.bool,
-  /**
-   * Class to show loading indicator
-   */
-  loadingClass: PropTypes.string,
   /**
    * Class to apply to button
    */
@@ -107,7 +100,6 @@ Button.defaultProps = {
   loading: false,
   outline: false,
   active: false,
-  loadingClass: 'fa fa-circle-o-notch fa-spin',
   className: '',
   style: {},
   ariaLabel: '',

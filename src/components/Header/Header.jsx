@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from '../../helpers/WithStyles';
-import Icon from '../Icon';
 
 class Header extends Component {
   constructor(props) {
@@ -10,7 +9,7 @@ class Header extends Component {
   }
 
   render() {
-    const { className, type, children, textAlign, icon, style } = this.props;
+    const { className, type, children, style } = this.props;
     const componentClassName = `${className}`;
     return React.createElement(
       type,
@@ -18,11 +17,7 @@ class Header extends Component {
         className: componentClassName,
         style
       },
-      [
-        icon && textAlign === 'left' && <Icon icon={icon} className="mr-1" />,
-        children,
-        icon && textAlign === 'right' && <Icon icon={icon} className="ml-1" />
-      ]
+      [children]
     );
   }
 }
@@ -41,25 +36,15 @@ Header.propTypes = {
    */
   type: PropTypes.string,
   /**
-   * Icon to show in component
-   */
-  icon: PropTypes.string,
-  /**
    * List of element to show inside as childrens.
    */
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
-  /**
-   * Icon to show in component
-   */
-  textAlign: PropTypes.string
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
 };
 Header.defaultProps = {
-  icon: '',
   className: '',
   style: null,
   type: 'h1',
-  children: null,
-  textAlign: null
+  children: null
 };
 
 export default withStyles(Header);

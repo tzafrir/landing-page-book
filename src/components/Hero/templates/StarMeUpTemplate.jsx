@@ -4,11 +4,10 @@ import Container from '../../Container/Container';
 import Button from '../../Button/Button';
 import Header from '../../Header/Header';
 import Image from '../../Image/Image';
-import GithubButton from '../../GithubButton/GithubButton';
 
 class StarMeUpTemplate extends Component {
   render() {
-    const { repository, username, header, subHeader, callToAction, productImage } = this.props;
+    const { header, subHeader, callToAction, productImage } = this.props;
     return (
       <Container>
         <Image
@@ -24,12 +23,6 @@ class StarMeUpTemplate extends Component {
         </Header>
         <div className="mt-5">
           <Button>{callToAction.text}</Button>
-          <GithubButton
-            btnType="star"
-            btnText="Stars"
-            username={username}
-            repository={repository}
-          />
         </div>
       </Container>
     );
@@ -37,8 +30,6 @@ class StarMeUpTemplate extends Component {
 }
 
 StarMeUpTemplate.propTypes = {
-  repository: PropTypes.string,
-  username: PropTypes.string,
   header: PropTypes.string,
   subHeader: PropTypes.string,
   callToAction: PropTypes.shape({
@@ -53,8 +44,6 @@ StarMeUpTemplate.propTypes = {
 };
 
 StarMeUpTemplate.defaultProps = {
-  repository: 'landing-page-book',
-  username: 'front10',
   header: 'Landing Page Book',
   subHeader: 'React components to build!',
   callToAction: {

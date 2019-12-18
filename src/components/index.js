@@ -1,4 +1,3 @@
-import Card from './Card';
 import Column from './Column';
 import Container from './Container';
 import Copyright from './Copyright';
@@ -17,7 +16,6 @@ import Row from './Row';
 import Section from './Section';
 
 export {
-  Card,
   Column,
   Container,
   Copyright,

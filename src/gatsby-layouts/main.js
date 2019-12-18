@@ -1,33 +1,24 @@
 import React from 'react';
+
 import PropTypes from 'prop-types';
+
 import GatsbyLink from 'gatsby-link';
+
 import Helmet from 'react-helmet';
+
+import 'font-awesome/css/font-awesome.min.css';
+
+import { Navbar, NavbarNav, Footer, Copyright, Image, Row, Column, Link } from '../components';
+import '../themes/default/index.css';
 import TemeSwitcher from '../../storybook-utils/components/ThemeSwitcher';
 import logo from '../../assets/images/logo/logoMainBLACK.png';
 
-import {
-  Navbar,
-  NavbarNav,
-  Social,
-  Footer,
-  Copyright,
-  Image,
-  Row,
-  Column,
-  Analytics,
-  Link
-} from '../components';
-
-import 'font-awesome/css/font-awesome.min.css';
-import '../themes/default/index.css';
-import '../pages/app.css';
-
 import faviconApple from './favicons/apple-touch-icon.png';
-import favicon from './favicons/favicon.ico';
-import favicon32 from './favicons/favicon-32x32.png';
 import favicon16 from './favicons/favicon-16x16.png';
-import faviconSafari from './favicons/safari-pinned-tab.svg';
+import favicon32 from './favicons/favicon-32x32.png';
+import favicon from './favicons/favicon.ico';
 import faviconMstile from './favicons/mstile-144x144.png';
+import faviconSafari from './favicons/safari-pinned-tab.svg';
 
 class MainLayout extends React.Component {
   render() {
@@ -59,7 +50,6 @@ class MainLayout extends React.Component {
           <meta name="theme-color" content="#ffffff" />
           <link rel="shortcut icon" href={favicon} />
         </Helmet>
-        <Analytics idTracking="UA-44521541-9" />
         <Navbar
           brandLink=""
           expand="md"
@@ -140,10 +130,6 @@ class MainLayout extends React.Component {
                   width="100"
                 />
               </Link>
-            </Column>
-            <Column className="col-sm-12 col-md mt-3 mt-md-0">
-              <Social type="twitter" url="https://twitter.com/front10hello" />
-              <Social type="linkedin" url="https://www.linkedin.com/company/front10/" />
             </Column>
           </Row>
         </Footer>
